@@ -16,7 +16,8 @@ end years for training and validation, or prompting the user to input these valu
 Are based on an iterative process of developing decision stumps (one-level decision tree). The algorithm develops a stump, scores for errors, and develops more stumps to correct for these errors. The process continues until the number of trees is that which was specified by the user, or the error score is smaller than a certain threshold for a certain number of iterations (also specified by the user). Visually, each decision stump fits a step function to the remaining errors. Because of this, they can approach data points fairly well, but fall short when tested with parameters outside of its training range.
 
 ![A Simple Decision Stump](http://i.imgur.com/seFXv2h.png)
-A Simple Decision Stump
+This image depicts a simple decision stump
+
 
 
 
