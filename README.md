@@ -29,11 +29,13 @@ An additional feature, available in H2O, is to run a model of Extremely Random F
 
 The partitioning of sets of data points for training and validation can be done in two way in the scripts. The first one is 'as is'. The scripts will create a uniformly distributed random variable in the range of [0, 1] for each data point in the data set. Further, an 80/20 split based on generated values of this random variable will define the training and validation. This means that 80% of total observations are randomly selected to be part of the training set, and 20% of the validation set. This way, there will be training and validation data points throughout the entire data set. For consistency in modelling, H2O offers the option of setting a random number seed, resulting in the same training and validation sets. 
 
-The second way to to run the scripts is by manually defining the training and validation sets, which can be useful if the user has an idea of what observations should comprise the testing, and validation set. 
+The second way to to run the scripts is by manually defining the training and validation sets, which can be useful if the user has an idea of what observations should comprise the testing, and validation set. The script allows the user to input start and end years for training and validation sets. This option can be commented out, so that the start and end years are constant across script runs.
 
-Note: Testing sets are not defined because testing is performed against a weather-year data CSV file. However, they can be defined in the same way, by random or user-defined partitioning. 
+![]() GBM with 100 trees, using random partitioning for training and validation sets
+![]() GBM with 100 trees, using user-defined partitioning for training and validation sets
 
-In user-defined partitioning, the partition variable specified is used to partition the data set. This is useful when you have already pre-determined the observations to be used in the Training, Validation, or Test Sets. This partition variable takes the value: t for training, v for validation and s for test. Rows with any other values in the Partition Variable column are ignored. The partition variable serves as a flag for writing each observation to the appropriate partition(s).
+Note: Testing is performed against a weather-year data CSV file. However, they can be defined within this data file in the same way, by random or user-defined partitioning. 
+
 
 ####Tuning
 H2O offers a variety of tuning parameters for both GBMs and RFs. 
