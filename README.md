@@ -17,10 +17,7 @@ end years for training and validation, or prompting the user to input these valu
 #####Gradient Boosting Models (GBMs)
 This model is based on an iterative process of developing decision stumps (one-level decision tree), and correcting for errors through boosting. The algorithm develops a stump, scores for errors, and develops more stumps to correct for these errors. The process continues until the number of trees is that which was specified by the user, or the error score is smaller than a certain threshold for a certain number of iterations (also specified by the user). Visually, each decision stump fits a step function to the remaining errors. Because of this, they can approach data points fairly well, but fall short when extrapolating to test with parameters outside of its training range.
 
-
-![A Simple Decision Stump](http://i.imgur.com/0bMkBK9.png)
-
-![]()
+![A Simple Decision Stump]({{site.baseurl}}//decision_stump.png)
 
 This image depicts a simple decision stump
 
@@ -31,6 +28,3 @@ Similar to what GBMs do, RFs develop a series of decision trees using a process 
 An additional feature, available in H2O, is to run a model of Extremely Random Forests (ERFs), where another layer of randomness is added. GBMs and RFs find the optimal split at each decision node. However, ERFs find a random threshold by which to create the split. This helps in further reducing variance, but maintains the same weakness in extrapolating as GBMs or RFs. 
 
 ####Tuning
-
-
-
