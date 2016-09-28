@@ -34,7 +34,8 @@ GBM with 100 trees, using random partitioning for training and validation sets
 GBM with 100 trees, using user-defined partitioning for training and validation sets
 
 As can be seen, the definition of the training and validation set may have a significant effect on the extrapolated predictions on the testing set.
-Note: Testing is performed against a weather-year data CSV file. However, they can be defined within this data file in the same way, by random or user-defined partitioning. 
+
+Note: Testing is performed against a weather-year data CSV file. However, a testing set may be defined within this data file in the same way, by random or user-defined partitioning. 
 
 
 ###Tuning
