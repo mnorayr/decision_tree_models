@@ -74,3 +74,14 @@ distribution: GBMs support multiple distributions (AUTO, bernoulli, multinomial,
 histogram_type: By default (AUTO) DRF bins from min...max in steps of (max-min)/N. Random split points or quantile-based split points can be selected as well. RoundRobin can be specified to cycle through all histogram types (one per tree). Use this option to specify the type of histogram to use for finding optimal split points: AUTO, UniformAdaptive, Random, QuantilesGlobal, RoundRobin.
 
 Note: H2O supports extremely randomized trees via histogram_type="Random". In extremely randomized trees (Extra-Trees), randomness goes one step further in the way splits are computed. As in Random Forests, a random subset of candidate features is used, but instead of looking for the best split, thresholds (for the split) are drawn at random for each candidate feature, and the best of these randomly-generated thresholds is picked as the splitting rule. This usually allows to reduce the variance of the model a bit more, at the expense of a slightly greater increase in bias.
+
+###Outcome
+
+Decision tree training is based on the iterative fitting of step functions into data sets, each time optimizing for error correction at all points. Because of this, they can fit data very well. However, it was found that decision trees are a viable model to implement for future outage prediction. Because some predictors (such as bad cable mileage), which we expect to be especially significant in reducing outages, find themselves out of range from the values on which the model was trained and validated, the model fails at recognizing the effect this predictor might have in the future if taken out of range. Because of this, the results of the extrapolation that decision trees may predict cannot be trusted. 
+
+![]() 
+
+Example of Decision Trees' Data Fitting Through Step Functions
+GBM with 100 trees, using random partitioning for training and validation sets
+
+As previously noted, it was decided to use random partitioning for training and validation sets.
