@@ -25,11 +25,11 @@ The scripts allow for partioning of sets of data points for training and validat
 
 The second way to to run the scripts is by manually defining the training and validation sets, which can be useful if the user has an idea of what observations should comprise the testing, and validation set. The script allows the user to input start and end years for training and validation sets. This option can be commented out, so that the start and end years are constant across script runs.
 
-![]() 
+![GBM with 100 trees, using random partitioning for training and validation sets](/gbm_yearly_random) 
 
 GBM with 100 trees, using random partitioning for training and validation sets
 
-![]()
+![GBM with 100 trees, using user-defined partitioning for training and validation sets](/gbm_yearly_user_defined)
 
 GBM with 100 trees, using user-defined partitioning for training and validation sets
 
@@ -80,5 +80,7 @@ Note: H2O supports extremely randomized trees via histogram_type="Random". In ex
 Decision tree training is based on the iterative fitting of step functions into data sets, each time optimizing for error correction at all points. Because of this, they can fit data very well. However, it was found that decision trees are a viable model to implement for future outage prediction. Because some predictors (such as bad cable mileage), which we expect to be especially significant in reducing outages, find themselves out of range from the values on which the model was trained and validated, the model fails at recognizing the effect this predictor might have in the future if taken out of range. Because of this, the results of the extrapolation that decision trees may predict cannot be trusted. 
 
 ![Example of Decision Trees' Data Fitting Through Step Functions](/error_residual.PNG) 
+
+Example of Decision Trees' Data Fitting Through Step Functions
 
 As previously noted, it was decided to use random partitioning for training and validation sets.
