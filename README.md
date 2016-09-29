@@ -82,6 +82,5 @@ Decision tree training is based on the iterative fitting of step functions into 
 ![]() 
 
 Example of Decision Trees' Data Fitting Through Step Functions
-GBM with 100 trees, using random partitioning for training and validation sets
 
 As previously noted, it was decided to use random partitioning for training and validation sets.
