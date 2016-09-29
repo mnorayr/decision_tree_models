@@ -25,11 +25,11 @@ The scripts allow for partioning of sets of data points for training and validat
 
 The second way to to run the scripts is by manually defining the training and validation sets, which can be useful if the user has an idea of what observations should comprise the testing, and validation set. The script allows the user to input start and end years for training and validation sets. This option can be commented out, so that the start and end years are constant across script runs.
 
-![GBM with 100 trees, using random partitioning for training and validation sets](/gbm_yearly_random) 
+![GBM with 100 trees, using random partitioning for training and validation sets](/gbm_yearly_random.png) 
 
 GBM with 100 trees, using random partitioning for training and validation sets
 
-![GBM with 100 trees, using user-defined partitioning for training and validation sets](/gbm_yearly_user_defined)
+![GBM with 100 trees, using user-defined partitioning for training and validation sets](/gbm_yearly_user_defined.png)
 
 GBM with 100 trees, using user-defined partitioning for training and validation sets
 
