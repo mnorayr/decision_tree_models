@@ -11,7 +11,7 @@ This model is based on an iterative process of developing decision stumps (one-l
 
 ![A Simple Decision Stump](/decision_stump.png)
 
-This image depicts a simple decision stump
+*This image depicts a simple decision stump*
 
 
 ####Random Forests (RFs)
@@ -27,13 +27,13 @@ The second way to to run the scripts is by manually defining the training and va
 
 ![GBM with 100 trees, using random partitioning for training and validation sets](/gbm_yearly_random.png) 
 
-GBM with 100 trees, using random partitioning for training and validation sets
+*GBM with 100 trees, using random partitioning for training and validation sets*
 
 ![GBM with 100 trees, using user-defined partitioning for training and validation sets](/gbm_yearly_user_defined.png)
 
-GBM with 100 trees, using user-defined partitioning for training and validation sets
+*GBM with 100 trees, using user-defined partitioning for training and validation sets*
 
-As can be seen, the definition of the training and validation set may have a significant effect on the extrapolated predictions on the testing set.
+As can be seen, the definition of the training and validation set may have a significant effect on the extrapolated predictions on the testing set. It appears that random partinioning tends to fit the data set better than user-defined partitioning. This can be a positive result because it meas the model can be robust to outliers. However, it runs the risk of overfitting, yielding poor results when extrapolating.
 
 Note: Testing is performed against a weather-year data CSV file. However, a testing set may be defined within this data file in the same way, by random or user-defined partitioning. 
 
@@ -45,25 +45,25 @@ H2O offers a variety of tuning parameters for both GBMs and RFs. For a comprehen
 
 ####Parameters for GBMs and RFs:
 
-x: Vector containing the names of predictors used to build model
+**x**: Vector containing the names of predictors used to build model
 
-y: Vector containing the name of the response variable
+**y**: Vector containing the name of the response variable
 
-training_frame: an H2O Frame containing the data to be used for model training
+**training_frame**: an H2O Frame containing the data to be used for model training
 
-validation_frame: an H2O Frame containing the data to be used for model validation
+**validation_frame**: an H2O Frame containing the data to be used for model validation
 
-ntrees: Defines the number of trees the model will generate. Default is 50.
+**ntrees**: Defines the number of trees the model will generate. Default is 50.
 
-max_depth: Defines the tree depth. Default is 5.
+**max_depth**: Defines the tree depth. Default is 5.
 
-seed: Especially useful when looking to replicate sampling in model development
+**seed**: Especially useful when looking to replicate sampling in model development
 
-score_each_iteration: Indicates whether to score during each iteration of model training
+**score_each_iteration**: Indicates whether to score during each iteration of model training
 
-stopping_metric: Determines metric used for early stopping. Can be AUTO, deviance, logloss, MSE, AUC, 2r, or misclassification
+**stopping_metric**: Determines metric used for early stopping. Can be AUTO, deviance, logloss, MSE, AUC, 2r, or misclassification
 
-stopping_rounds: Early stopping based on convergence of stopping_metric.
+**stopping_rounds**: Early stopping based on convergence of stopping_metric.
 
 ####Parameters for GBMs only:
 
@@ -81,6 +81,6 @@ Decision tree training is based on the iterative fitting of step functions into 
 
 ![Example of Decision Trees' Data Fitting Through Step Functions](/error_residual.PNG) 
 
-Example of Decision Trees' Data Fitting Through Step Functions
+*Example of Decision Trees' Data Fitting Through Step Functions*
 
 As previously noted, it was decided to use random partitioning for training and validation sets.
