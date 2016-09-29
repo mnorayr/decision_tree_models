@@ -67,11 +67,11 @@ H2O offers a variety of tuning parameters for both GBMs and RFs. For a comprehen
 
 ####Parameters for GBMs only:
 
-distribution: GBMs support multiple distributions (AUTO, bernoulli, multinomial, gaussian, poisson, gamma, or tweedie)
+**distribution**: GBMs support multiple distributions (AUTO, bernoulli, multinomial, gaussian, poisson, gamma, or tweedie)
 
 ####Parameters for RFs only:
 
-histogram_type: By default (AUTO) DRF bins from min...max in steps of (max-min)/N. Random split points or quantile-based split points can be selected as well. RoundRobin can be specified to cycle through all histogram types (one per tree). Use this option to specify the type of histogram to use for finding optimal split points: AUTO, UniformAdaptive, Random, QuantilesGlobal, RoundRobin.
+**histogram_type**: By default (AUTO) DRF bins from min...max in steps of (max-min)/N. Random split points or quantile-based split points can be selected as well. RoundRobin can be specified to cycle through all histogram types (one per tree). Use this option to specify the type of histogram to use for finding optimal split points: AUTO, UniformAdaptive, Random, QuantilesGlobal, RoundRobin.
 
 Note: H2O supports extremely randomized trees via histogram_type="Random". In extremely randomized trees (Extra-Trees), randomness goes one step further in the way splits are computed. As in Random Forests, a random subset of candidate features is used, but instead of looking for the best split, thresholds (for the split) are drawn at random for each candidate feature, and the best of these randomly-generated thresholds is picked as the splitting rule. This usually allows to reduce the variance of the model a bit more, at the expense of a slightly greater increase in bias.
 
@@ -83,4 +83,4 @@ Decision tree training is based on the iterative fitting of step functions into 
 
 *Example of Decision Trees' Data Fitting Through Step Functions*
 
-As previously noted, it was decided to use random partitioning for training and validation sets.
+As previously noted, it was decided to use random partitioning for training and validation sets due to its improved results in fitting the data.
