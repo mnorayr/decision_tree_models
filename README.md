@@ -83,4 +83,5 @@ Decision tree training is based on the iterative fitting of step functions into 
 
 *Example of Decision Trees' Data Fitting Through Step Functions*
 *Source: Dr. Alexander Ihler, http://sli.ics.uci.edu/Classes/2015W-273a?action=download&upname=09-ensembles.pdf*
+
 As previously noted, it was decided to use random partitioning for training and validation sets due to its improved results in fitting the data.
