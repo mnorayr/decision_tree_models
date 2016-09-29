@@ -9,7 +9,7 @@ These scripts have been developed using Python and the H2O library with the purp
 ####Gradient Boosting Models (GBMs)
 This model is based on an iterative process of developing decision stumps (one-level decision tree), and correcting for errors through boosting. The algorithm develops a stump, scores for errors, and develops more stumps to correct for these errors. The process continues until the number of trees is that which was specified by the user, or the error score is smaller than a certain threshold for a certain number of iterations (also specified by the user). Visually, each decision stump fits a step function to the remaining errors. Because of this, they can approach data points fairly well, but fall short when extrapolating to test with parameters outside of its training range.
 
-![A Simple Decision Stump]({{site.baseurl}}//decision_stump.png)
+![A Simple Decision Stump](/decision_stump.png)
 
 This image depicts a simple decision stump
 
@@ -79,8 +79,6 @@ Note: H2O supports extremely randomized trees via histogram_type="Random". In ex
 
 Decision tree training is based on the iterative fitting of step functions into data sets, each time optimizing for error correction at all points. Because of this, they can fit data very well. However, it was found that decision trees are a viable model to implement for future outage prediction. Because some predictors (such as bad cable mileage), which we expect to be especially significant in reducing outages, find themselves out of range from the values on which the model was trained and validated, the model fails at recognizing the effect this predictor might have in the future if taken out of range. Because of this, the results of the extrapolation that decision trees may predict cannot be trusted. 
 
-![]() 
-
-Example of Decision Trees' Data Fitting Through Step Functions
+![Example of Decision Trees' Data Fitting Through Step Functions](/error_residual.PNG) 
 
 As previously noted, it was decided to use random partitioning for training and validation sets.
